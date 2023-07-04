@@ -25,7 +25,7 @@ export function compileInput(input: string, options: CompileOptions) {
 	try {
 		const result = mjml(content, options.mjml)
 		const outputFile = input
-			.replace(options.input.substring(0, options.input.lastIndexOf("/")), options.output)
+			.replace(options.output.replace, options.output.with)
 			.replace('.mjml', options.extension)
 
 		fs.mkdirSync(path.dirname(outputFile), { recursive: true })
