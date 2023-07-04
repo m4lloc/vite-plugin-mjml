@@ -53,7 +53,10 @@ export default function(options: Partial<Options> = {}): Plugin {
 		configResolved(config) {
 			compileOptions = {
 				input: 'resources/mail',
-				output: 'resources/views/emails',
+				output: {
+					replace: 'resources/mail',
+					with: 'resources/views/emails'
+				},
 				extension: '.blade.php',
 				logger: config.logger,
 				building: config.command === 'build',
