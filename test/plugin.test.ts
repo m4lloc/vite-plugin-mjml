@@ -4,7 +4,10 @@ import { beforeEach, expect, test } from 'vitest'
 import { build } from 'vite'
 import mjml from '../src'
 
-const output = path.resolve(__dirname, 'output')
+const output = {
+	path.resolve(__dirname, 'output'),	
+	path.resolve(__dirname, 'output')
+}
 const fixtures = path.resolve(__dirname, 'fixtures')
 
 beforeEach(() => fs.rmSync(output, { recursive: true, force: true }))
